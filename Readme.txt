@@ -1,9 +1,9 @@
-# Little Lemon Restaurant API
+Little Lemon Restaurant API
 
-## Project Description
-The Little Lemon Restaurant API is a Django REST Framework application that provides RESTful APIs for managing restaurant menu items and table bookings. It also supports user authentication using Django REST Framework Token Authentication and Djoser.
+Overview
+This project is a RESTful API built using Django REST Framework for the Meta Back-End Developer Capstone. It provides APIs to manage restaurant menu items and table bookings, with user authentication and MySQL database integration.
 
-## Technologies Used
+ Technologies
 - Python
 - Django
 - Django REST Framework
@@ -11,43 +11,15 @@ The Little Lemon Restaurant API is a Django REST Framework application that prov
 - Djoser
 - Token Authentication
 
-## Installation
+ API Endpoints
 
-1. Clone the repository.
-2. Create and activate a virtual environment.
-3. Install the required packages:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Configure the MySQL database in `settings.py`.
-5. Apply migrations:
-
-```bash
-python manage.py migrate
-```
-
-6. Create a superuser:
-
-```bash
-python manage.py createsuperuser
-```
-
-7. Start the development server:
-
-```bash
-python manage.py runserver
-```
-
-## API Endpoints
-
-### Home
-```
+# Home
 /
 ```
+GET /
+```
 
-### Menu
+# Menu
 ```
 GET    /menu/
 POST   /menu/
@@ -56,7 +28,7 @@ PUT    /menu/<id>/
 DELETE /menu/<id>/
 ```
 
-### Bookings
+# Bookings
 ```
 GET    /bookings/
 POST   /bookings/
@@ -65,25 +37,45 @@ PUT    /bookings/<id>/
 DELETE /bookings/<id>/
 ```
 
-### Authentication
+# Authentication
 ```
 POST /api-token-auth/
+POST /auth/users/
 POST /auth/token/login/
 POST /auth/token/logout/
-POST /auth/users/
 ```
 
-### Admin Panel
+# Admin
 ```
 /admin/
 ```
 
-## Running Tests
+ Running the Project
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Apply migrations:
+
+```bash
+python manage.py migrate
+```
+
+Run the server:
+
+```bash
+python manage.py runserver
+```
+
+Run tests:
 
 ```bash
 python manage.py test
 ```
 
-## Author
+ Author
 
 Rashmi Achar
