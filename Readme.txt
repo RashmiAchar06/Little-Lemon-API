@@ -1,81 +1,30 @@
 Little Lemon Restaurant API
 
-Overview
-This project is a RESTful API built using Django REST Framework for the Meta Back-End Developer Capstone. It provides APIs to manage restaurant menu items and table bookings, with user authentication and MySQL database integration.
+API Paths for Testing
 
- Technologies
-- Python
-- Django
-- Django REST Framework
-- MySQL
-- Djoser
-- Token Authentication
+Home Page
+http://127.0.0.1:8000/
 
- API Endpoints
+Menu API
+GET    http://127.0.0.1:8000/menu/
+GET    http://127.0.0.1:8000/menu/1/
 
-# Home
-/
-```
-GET /
-```
+Booking API
+GET    http://127.0.0.1:8000/bookings/
+GET    http://127.0.0.1:8000/bookings/1/
 
-# Menu
-```
-GET    /menu/
-POST   /menu/
-GET    /menu/<id>/
-PUT    /menu/<id>/
-DELETE /menu/<id>/
-```
+Authentication
+POST   http://127.0.0.1:8000/api-token-auth/
+POST   http://127.0.0.1:8000/auth/users/
+POST   http://127.0.0.1:8000/auth/token/login/
+POST   http://127.0.0.1:8000/auth/token/logout/
 
-# Bookings
-```
-GET    /bookings/
-POST   /bookings/
-GET    /bookings/<id>/
-PUT    /bookings/<id>/
-DELETE /bookings/<id>/
-```
+Admin Panel
+http://127.0.0.1:8000/admin/
 
-# Authentication
-```
-POST /api-token-auth/
-POST /auth/users/
-POST /auth/token/login/
-POST /auth/token/logout/
-```
-
-# Admin
-```
-/admin/
-```
-
- Running the Project
-
-Install dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-Apply migrations:
-
-```bash
-python manage.py migrate
-```
-
+Testing
 Run the server:
-
-```bash
 python manage.py runserver
-```
 
-Run tests:
-
-```bash
+Run unit tests:
 python manage.py test
-```
-
- Author
-
-Rashmi Achar
